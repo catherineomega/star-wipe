@@ -4,21 +4,33 @@
 $font-stack:    Helvetica, sans-serif;
 
 body {
-  background-color: $scheme1_1;
-  color: $scheme1_4;
   font: 100% $font-stack;
 }
 
+h1 {
+  font-size: 10em;
+  font-weight: 900;
+  line-height: 1em;
+}
 
+html,
+body,
+.aligner {
+  min-height: 100vh;
+  min-width: 100vw;
+}
 
 .aligner {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
 }
 
 .aligner-item {
-  max-width: 50%;
+  // max-width: 50%;
+  // flex: 1;
 }
 
 .aligner-item--top {
@@ -27,4 +39,66 @@ body {
 
 .aligner-item--bottom {
   align-self: flex-end;
+}
+
+.aligner-item--fixed {
+  flex: none;
+  // max-width: 50%;
+}
+
+
+.scheme-1 {
+  background-color: $scheme1_1;
+  color: $scheme1_4;
+  mask: url(#mask1);
+}
+
+.scheme-2 {
+  background-color: $scheme2_1;
+  color: $scheme2_4;
+}
+
+.wipe-container {
+  .aligner {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    &:nth-child(1) {
+      z-index: 10;
+    }
+  }
+}
+
+
+
+/* add this class to animate mask position and size and rotate it */
+
+.animate {
+  transform: rotate(360deg);
+  animation: move 0.5s ease;
+}
+
+
+/* CSS animation */
+
+@keyframes move {
+  0% {
+    mask-position: 0 0;
+    mask-size: 30%;
+    transform: rotate(10deg);
+  }
+  100% {
+    mask-position: 50% 10%;
+    mask-size: 100% 80%;
+    mask-size: 80%;
+    transform: rotate(360deg);
+  }
+}
+
+
+.visible {
+  opacity: 1;
+  visibility: visible;
 }

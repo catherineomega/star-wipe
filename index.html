@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Star Wipe</title>
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
@@ -23,16 +23,33 @@
     <link rel="stylesheet" href="assets/css/star-wipe.css">
   </head>
   <body>
+    <div class="wipe-container">
 
-
-    <div class="aligner">
-      <!-- <div class="aligner-item aligner-item--top">…</div> -->
-      <div class="aligner-item">
-        <h1>Hello, world!</h1>
+      <div class="aligner scheme-1">
+        <div class="aligner-item">
+          <h1>Hello, world!</h1>
+        </div>
       </div>
-      <!-- <div class="aligner-item aligner-item--bottom">…</div> -->
-    </div>
 
+      <div class="aligner scheme-2">
+        <div class="aligner-item">
+          <h1>Hello, world!</h1>
+        </div>
+      </div>
+
+
+      <svg class="svg-mask">
+       <defs>
+        <mask id="mask1" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+         <!-- <linearGradient id="grad" gradientUnits="objectBoundingBox" x2="0" y2="1">
+          <stop stop-color="white" offset="0"/>
+          <stop stop-color="black" stop-opacity="0" offset="1"/>
+         </linearGradient> -->
+         <circle cx="0.50" cy="0.50" r="0.50" id="circle" fill="#fff"/>
+        </mask>
+       </defs>
+      </svg>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
