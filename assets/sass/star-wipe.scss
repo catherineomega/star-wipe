@@ -1,0 +1,30 @@
+@import 'color';
+
+
+$font-stack:    Helvetica, sans-serif;
+
+body {
+  background-color: $scheme1_1;
+  color: $scheme1_4;
+  font: 100% $font-stack;
+}
+
+
+
+.aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aligner-item {
+  max-width: 50%;
+}
+
+.aligner-item--top {
+  align-self: flex-start;
+}
+
+.aligner-item--bottom {
+  align-self: flex-end;
+}

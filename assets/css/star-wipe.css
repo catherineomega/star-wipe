@@ -1,0 +1,20 @@
+body {
+  background-color: #FFE1C4;
+  color: #8D6476;
+  font: 100% Helvetica, sans-serif; }
+
+.aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.aligner-item {
+  max-width: 50%; }
+
+.aligner-item--top {
+  align-self: flex-start; }
+
+.aligner-item--bottom {
+  align-self: flex-end; }
+
+/*# sourceMappingURL=star-wipe.css.map */
