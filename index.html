@@ -38,16 +38,20 @@
       </div>
 
 
-      <svg class="svg-mask">
-       <defs>
-        <mask id="mask1" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+      <!-- <svg class="svg-mask" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"> -->
+      <svg class="svg-mask" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+       <!-- <defs> -->
+        <!-- <mask id="mask1" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox"> -->
+        <mask id="mask1" width="100" height="100" >
          <!-- <linearGradient id="grad" gradientUnits="objectBoundingBox" x2="0" y2="1">
           <stop stop-color="white" offset="0"/>
           <stop stop-color="black" stop-opacity="0" offset="1"/>
          </linearGradient> -->
-         <circle cx="0.50" cy="0.50" r="0.50" id="circle" fill="#fff"/>
+         <!-- <svg class="svg-inner" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"> -->
+           <circle cx="50" cy="50" r="40px" id="circle" fill="#fff"></circle>
+         <!-- </svg> -->
         </mask>
-       </defs>
+       <!-- </defs> -->
       </svg>
     </div>
 

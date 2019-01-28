@@ -30,7 +30,9 @@ body,
 .scheme-1 {
   background-color: #FFE1C4;
   color: #8D6476;
-  mask: url(#mask1); }
+  mask: url(#mask1);
+  mask-size: contain;
+  background-size: contain; }
 
 .scheme-2 {
   background-color: #CFF09E;
@@ -44,12 +46,23 @@ body,
   .wipe-container .aligner:nth-child(1) {
     z-index: 10; }
 
+#mask1 {
+  width: 100vw;
+  height: 100vh;
+  mask-position: center; }
+
 /* add this class to animate mask position and size and rotate it */
 .animate {
-  transform: rotate(360deg);
-  animation: move 0.5s ease; }
+  transform: rotate(360deg); }
+  .animate #circle {
+    animation: zoom 0.5s ease; }
 
 /* CSS animation */
+@keyframes zoom {
+  from {
+    transform: scale(0.2); }
+  to {
+    transform: scale(1); } }
 @keyframes move {
   0% {
     mask-position: 0 0;
@@ -60,8 +73,5 @@ body,
     mask-size: 100% 80%;
     mask-size: 80%;
     transform: rotate(360deg); } }
-.visible {
-  opacity: 1;
-  visibility: visible; }
 
 /*# sourceMappingURL=star-wipe.css.map */

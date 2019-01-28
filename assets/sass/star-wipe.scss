@@ -51,6 +51,8 @@ body,
   background-color: $scheme1_1;
   color: $scheme1_4;
   mask: url(#mask1);
+  mask-size: contain;
+  background-size: contain;
 }
 
 .scheme-2 {
@@ -72,16 +74,34 @@ body,
 }
 
 
+#mask1 {
+  width: 100vw;
+  height: 100vh;
+  mask-position: center;
+}
+
 
 /* add this class to animate mask position and size and rotate it */
 
 .animate {
   transform: rotate(360deg);
-  animation: move 0.5s ease;
+  // animation: move 0.5s ease;
+  #circle {
+    animation: zoom 0.5s ease;
+  }
 }
 
 
+
 /* CSS animation */
+@keyframes zoom {
+  from {
+    transform: scale(0.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 
 @keyframes move {
   0% {
@@ -98,7 +118,7 @@ body,
 }
 
 
-.visible {
-  opacity: 1;
-  visibility: visible;
-}
+// .visible {
+//   opacity: 1;
+//   visibility: visible;
+// }

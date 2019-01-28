@@ -23,6 +23,7 @@ var mask = document.querySelector('svg'),
 //add event listener to animate button to add the relevant CSS classes to the appropriate elements to animate them
 btn.addEventListener('click', function(e) {
   e.preventDefault();
+  console.log("clicked");
   mask.classList.add('animate');
   paragraph.classList.add('visible');
 }, false);
